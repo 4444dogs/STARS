@@ -40,24 +40,22 @@ def draw():
       rocketship.draw()
       mars.draw()
       at_planet = False
-      traveled_to_mars = rocketship.colliderect(mars)
-      if traveled_to_mars:
-        screen.clear()
-        screen.draw.text("Mars", topleft=(10, 10), fontsize = 60)
-        screen.draw.text("Mars is named after the roman god of war.", topleft=(10, 80), fontsize = 24)
-        screen.draw.text("The Average Temperature of Mars is -81°F or -63°C", topleft=(10, 120), fontsize = 24)
-        mars_real.draw()
-        earth.draw()
-        astronaut.draw()
-        at_planet = True
-        left = astronaut.colliderect(earth)
-        if left:
-          screen.clear()
-          normal()
-          at_planet = False
   normal()
-
-      
+  traveled_to_mars = rocketship.colliderect(mars)
+  if traveled_to_mars:
+      screen.clear()
+      screen.draw.text("Mars", topleft=(10, 10), fontsize = 60)
+      screen.draw.text("Mars is named after the roman god of war.", topleft=(10, 80), fontsize = 24)
+      screen.draw.text("The Average Temperature of Mars is -81°F or -63°C", topleft=(10, 120), fontsize = 24)
+      mars_real.draw()
+      earth.draw()
+      astronaut.draw()
+      at_planet = True
+      left = astronaut.colliderect(earth)
+      if left:
+        screen.clear()
+        normal()
+        at_planet = False
       
       
       
